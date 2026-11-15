@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1
+
+- Added: ACE Crew-Served Weapons compat; the ACE ammo boxes of the M2 (.50 BMG, also the tracer boxes) and the DShKM/NSV (12.7x108) count as belts: refill them from loose rounds or belts, unload or split them, then load them into a static weapon or a vehicle turret (Humvee M2) through ACE as usual; loads only with ACE
+
 ## 1.3.0
 
 - Added: refill a belt with loose rounds, up to 200, at the same steady pace as a belt magazine, without joining it with another belt (thanks Sammy Mellow): drag rounds, a box or stripper clips onto the belt (engine inventory and AIO), "Refill belt" in its context menu, or ACE self-interaction > Refill; its own rounds or, with universal ammunition on, universal ones
