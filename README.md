@@ -93,6 +93,36 @@ class CfgWeapons {
 
 That is all: your magazines with "plasma" in their name now load from Plasma Cells, round by round.
 
+**3. Your own items in GreenMag's Arsenal tab** (ammo cans, bandoliers, anything your mod turns into rounds or clips).
+One line in the item's class, nothing to require: without GreenMag or ACE it is simply ignored.
+
+```cpp
+class CfgWeapons {
+    class CBA_MiscItem;
+    class my_bandolier_556: CBA_MiscItem {
+        scope = 2;
+        gmr_arsenal = 1;   // listed in the Ammunition tab of ACE Arsenal instead of Misc
+    };
+};
+```
+
+It works for `CfgWeapons` and `CfgMagazines` classes with `scope = 2`, as long as ACE Arsenal counts them as misc
+items (inventory items, not magazines a weapon loads). They always show, whatever view the tab is set to.
+
+All lines at a glance:
+
+| line | in | does |
+| --- | --- | --- |
+| `gmr_caliber = "556x45";` | magazine | which rounds fit (names in `addons/items/cfg/calibers.hpp`) |
+| `gmr_belt = 1;` | magazine | refills from belts instead of loose rounds |
+| `gmr_variant = "tracer";` | magazine | the kind of round inside (advanced ammunition) |
+| `gmr_speedload = 0;` | magazine | no stripper clips with the speedloader |
+| `gmr_disabled = 1;` | magazine | GreenMag leaves it alone |
+| `gmr_arsenal = 1;` | item | shows it in GreenMag's Arsenal tab |
+
+Built in already, each loading only with its mod: RHS (AFRF, USAF, GREF, SAF), 3CB Factions and BAF Weapons, BWMod,
+CUP Weapons, NIArms, MCC and ACE Crew-Served Weapons. Missing your mod? Ask on the Workshop page or open an issue.
+
 ## Development
 
 `tools/generate_items.py` writes the item configs from its table, `tools/render_items.py` renders the item

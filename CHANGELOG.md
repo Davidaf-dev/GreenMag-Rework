@@ -2,6 +2,10 @@
 
 ## 1.3.1
 
+- Added: MCC compat (MCC Core, HK433 & HK437); every MCC magazine of a known caliber has its caliber set, loads only with MCC
+- Added: `gmr_arsenal = 1;` in another mod's item (ammo cans, bandoliers) lists it in GreenMag's tab of ACE Arsenal (thanks Herr Keown)
+- Docs: the README lists every config line for modders and the mods supported out of the box
+- Still universal: MCC's 6.5 Creedmoor, 6 ARC and 6.8 SPC magazines
 - Added: ACE Crew-Served Weapons compat; the ACE ammo boxes of the M2 (.50 BMG, also the tracer boxes) and the DShKM/NSV (12.7x108) count as belts: refill them from loose rounds or belts, unload or split them, then load them into a static weapon or a vehicle turret (Humvee M2) through ACE as usual; loads only with ACE
 
 ## 1.3.0

@@ -30,6 +30,7 @@ MODS = [
     ("compat_cupw", "CUP Weapons", ["497660133/addons/cup_weapons_*.pbo"]),
     ("compat_niarms", "NIArms", ["2595680138/addons/hlc_*.pbo", "2595680138/addons/nia_*.pbo",
                                  "2595680138/addons/sp_fwa_*.pbo"]),
+    ("compat_mcc", "MCC", ["3575468172/addons/MCC_*.pbo", "3754816159/addons/MCC_*.pbo"]),
 ]
 
 TOK = re.compile(r'"(?:[^"]|"")*"|[A-Za-z0-9_.\-+]+|[{};:=\[\],]')
