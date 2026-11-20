@@ -120,7 +120,7 @@ CALIBERS = {
         "sd": v("Subsonic", "subsonic", "_sd"),
     }),
     "762x54": ("7.62x54 mmR", "rifle", 0.25, ("762x54",), {"tracer": TRACER}),
-    "792x57": ("7.92x57 mm", "rifle", 0.27, ("792x57",), {}),
+    "792x57": ("7.92x57 mm", "rifle", 0.27, ("792x57", "792mm", "792mauser"), {}),
     "303": (".303 British", "rifle", 0.25, ("303br", "303_", "_303"), {}),
     "50bw": (".50 Beowulf", "rifle", 0.35, ("50bw", "50beowulf"), {}),
     "93x64": ("9.3x64 mm", "heavy", 0.40, ("93x64",), {}),
@@ -152,6 +152,7 @@ BELTS = (
     ("762x51", "tracer"),
     ("762x54", "basic"),
     ("762x54", "tracer"),
+    ("792x57", "basic"),
     ("93x64", "basic"),
 )
 

@@ -9,6 +9,7 @@ PREP(packSizes);
 PREP(parseAmmoRules);
 PREP(placeMagazine);
 PREP(registerBelts);
+PREP(scanMagazines);
 PREP(removeItem);
 PREP(siblingMagazine);
 PREP(takeBelts);

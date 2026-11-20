@@ -28,6 +28,10 @@ For the rest there are two ways without any code:
 - **Universal ammunition** fits every magazine, known or not. With ACE it is in the Ammunition tab of its Arsenal.
 - **The server setting "Ammo rules"** names a magazine's caliber: `vn_m16: 556x45, CUP_30Rnd_9x39: 9x39`. Part of the
   class name is enough. The caliber names are listed in `addons/items/cfg/calibers.hpp`.
+- **The magazine scan** writes that line for you: set a key for "Scan magazines of other mods" in the CBA controls
+  (GreenMag Rework), or run `call gmr_main_fnc_scanMagazines` in the debug console. It lists every magazine with no
+  caliber, suggests one where possible and, in singleplayer or as host, copies the line to the clipboard. Fill in the
+  ones marked `?` and paste it into the server setting.
 
 ## For modders: add your magazines and ammo
 

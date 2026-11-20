@@ -108,7 +108,7 @@ class gmr_calibers {
             class tracer {displayName = "Tracer"; tokens[] = {"tracer"};};
         };
     };
-    class 792x57 {displayName = "7.92x57 mm"; tokens[] = {"792x57"}; packs[] = {60,30,10};
+    class 792x57 {displayName = "7.92x57 mm"; tokens[] = {"792x57","792mm","792mauser"}; packs[] = {60,30,10};
         class variants {
             class basic {displayName = "Basic"; tokens[] = {};};
         };

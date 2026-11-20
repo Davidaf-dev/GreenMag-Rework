@@ -302,5 +302,20 @@ rhsusf_100Rnd_762x51: 762x51: belt</English>
         <Key ID="STR_gmr_main_Setting_ArsenalUsedCalibers_Desc">
             <English>Lists only ammunition that a magazine\nof the loaded mods takes: its caliber,\nits kind like tracer or subsonic,\nand rounds or belts.\n\nUniversal ammunition always stays.</English>
         </Key>
+        <Key ID="STR_gmr_main_Key_Scan">
+            <English>Scan magazines of other mods</English>
+        </Key>
+        <Key ID="STR_gmr_main_Key_Scan_Desc">
+            <English>Lists the magazines GreenMag Rework does not recognise\nand writes a ready "Ammo rules" line for them.</English>
+        </Key>
+        <Key ID="STR_gmr_main_Scan_Result">
+            <English>Magazine scan\n\n%1 magazines fire bullets.\n%2 have no caliber, %3 of them with a suggestion.\n\n%4</English>
+        </Key>
+        <Key ID="STR_gmr_main_Scan_ToClipboard">
+            <English>The "Ammo rules" line is in your clipboard and in the RPT. Paste it into the server setting, then fill in the ones marked with ?.</English>
+        </Key>
+        <Key ID="STR_gmr_main_Scan_ToRpt">
+            <English>The "Ammo rules" line is in your RPT. Scan in singleplayer or as host to get it in the clipboard.</English>
+        </Key>
     </Package>
 </Project>

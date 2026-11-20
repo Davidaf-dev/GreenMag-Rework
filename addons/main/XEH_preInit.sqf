@@ -30,4 +30,12 @@ GVAR(calibers) = ("true" configClasses (configFile >> "gmr_calibers")) apply {
 
 #include "initSettings.inc.sqf"
 
+if (hasInterface) then {
+    // No key by default: set one in the CBA controls, or run call gmr_main_fnc_scanMagazines in the debug console.
+    ["GreenMag Rework", QGVAR(keyScan), [LLSTRING(Key_Scan), LLSTRING(Key_Scan_Desc)], {
+        call FUNC(scanMagazines);
+        true
+    }, {}] call CBA_fnc_addKeybind;
+};
+
 ADDON = true;

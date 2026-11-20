@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.2
+
+- Added: magazine scan for other mods: a CBA key (GreenMag Rework, unbound) or `call gmr_main_fnc_scanMagazines` lists every bullet magazine without a caliber, suggests one where a known magazine fires the same ammo, and writes a ready "Ammo rules" line to the RPT and, in singleplayer or as host, the clipboard
+- Changed: the caliber is now also found with commas and underscores in the name ("7,92 mm", `csa38_7_92_...`), in the display name and in the ammo's parent classes; 7.92x57 also matches "7.92 mm" and "7.92 Mauser" (CSA 250-round boxes, thanks Davidaf)
+- Added: 7.92x57 belts of 1 to 200 rounds; 7.92x57 machine gun boxes (MG 34/42) now refill from belts
+
 ## 1.3.1
 
 - Added: MCC compat (MCC Core, HK433 & HK437); every MCC magazine of a known caliber has its caliber set, loads only with MCC

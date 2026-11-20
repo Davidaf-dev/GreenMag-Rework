@@ -35,9 +35,17 @@ private _ok = isClass _config
     && {_simulation in ["shotbullet", "shotspread"]}
     && {getNumber (_config >> "gmr_disabled") != 1};
 
-// Lowercase, without dots and spaces: "Caliber: 5.56x45 mm" reads caliber:556x45mm.
-private _fnc_clean = {((toLowerANSI _this) splitString ". ") joinString ""};
+// Lowercase, without dots, commas and spaces: "Caliber: 5,56x45 mm" reads caliber:556x45mm.
+private _fnc_clean = {((toLowerANSI _this) splitString ".,- ") joinString ""};
 private _sources = [_class call _fnc_clean, _ammo call _fnc_clean, getText (_config >> "descriptionShort") call _fnc_clean];
+
+// Looked at last: the names once more without underscores (csa38_7_92_250x reads 792250x), the display name, and the
+// ammo's parent classes. Variants are still only read from the first two.
+private _searchIn = +_sources;
+_searchIn pushBack ((_sources select 0) splitString "_" joinString "");
+_searchIn pushBack ((_sources select 1) splitString "_" joinString "");
+_searchIn pushBack (getText (_config >> "displayName") call _fnc_clean);
+_searchIn append ((configHierarchy _ammoConfig) apply {configName _x call _fnc_clean});
 
 private _caliber = getText (_config >> "gmr_caliber");
 
@@ -49,7 +57,7 @@ if (_ok && {_caliber isEqualTo ""}) then {
         if (_at >= 0) exitWith {
             _caliber = (GVAR(calibers) select _at) select 0;
         };
-    } forEach _sources;
+    } forEach _searchIn;
 };
 
 private _ruleBelt = -1;
