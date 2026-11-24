@@ -22,6 +22,9 @@ private _list = _display displayCtrl ARSENAL_ITEM_LIST;
 
 if (isNull _list) exitWith {};
 
+// In the editor no mission's start has set the count off.
+call FUNC(countCalibers);
+
 private _hidden = [];
 
 {
