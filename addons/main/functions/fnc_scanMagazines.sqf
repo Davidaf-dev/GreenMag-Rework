@@ -29,6 +29,7 @@ private _bullets = [];
         && {getNumber (_x >> "count") > 0}
         && {(toLowerANSI _class select [0, 4]) != "gmr_"}
         && {getNumber (_x >> "gmr_disabled") != 1}
+        && {private _key = toLowerANSI _class; (GVAR(excludedList) findIf {_x in _key}) < 0}
         && {(toLowerANSI getText (_ammoConfig >> "simulation")) in ["shotbullet", "shotspread"]}
     ) then {
         _bullets pushBack [_class, toLowerANSI getText (_x >> "ammo"), (_class call FUNC(magazineInfo)) select MAG_CALIBER];

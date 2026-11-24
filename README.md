@@ -32,6 +32,9 @@ For the rest there are two ways without any code:
   (GreenMag Rework), or run `call gmr_main_fnc_scanMagazines` in the debug console. It lists every magazine with no
   caliber, suggests one where possible and, in singleplayer or as host, copies the line to the clipboard. Fill in the
   ones marked `?` and paste it into the server setting.
+- **The server setting "Excluded magazines"** makes GreenMag leave a magazine alone, for magazines that hold no rounds
+  to take out (flamethrower tanks, batteries): `flamethrower, _battery`. Part of the class name is enough, but every
+  class containing it is excluded, so use enough of the name. Mods can do the same with `gmr_disabled = 1;` (below).
 
 ## For modders: add your magazines and ammo
 

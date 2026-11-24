@@ -1,7 +1,8 @@
 #include "..\script_component.hpp"
 /*
  * Author: Miss Heda
- * What this mod knows about a magazine class, worked out once on first use. A magazine's own gmr_* config entries
+ * What this mod knows about a magazine class, worked out once on first use. gmr_disabled = 1 in its config or a match
+ * in the server's "Excluded magazines" leaves it alone (no fuel tanks or batteries to unload). A magazine's own gmr_* config entries
  * win, and the server's rules (fnc_parseAmmoRules) over those; otherwise the caliber is looked for in its class name, then its ammo's, then its description, and whether it
  * is a belt follows from its name and size.
  *
@@ -33,6 +34,7 @@ private _simulation = toLowerANSI getText (_ammoConfig >> "simulation");
 private _ok = isClass _config
     && {_capacity > 0}
     && {_simulation in ["shotbullet", "shotspread"]}
+    && {(GVAR(excludedList) findIf {_x in _key}) < 0}
     && {getNumber (_config >> "gmr_disabled") != 1};
 
 // Lowercase, without dots, commas and spaces: "Caliber: 5,56x45 mm" reads caliber:556x45mm.

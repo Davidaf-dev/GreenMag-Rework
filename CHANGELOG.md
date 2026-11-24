@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.3
+
+- Added: server setting "Excluded magazines" (Rules): magazines whose class name contains one of the listed parts are left alone, no unloading, loading or refilling; for flamethrower tanks and other magazines without rounds to take out (Spearhead M2 flamethrower). Mods can still set `gmr_disabled = 1;` in a magazine's config for the same
+
 ## 1.3.2
 
 - Added: magazine scan for other mods: a CBA key (GreenMag Rework, unbound) or `call gmr_main_fnc_scanMagazines` lists every bullet magazine without a caliber, suggests one where a known magazine fires the same ammo, and writes a ready "Ammo rules" line to the RPT and, in singleplayer or as host, the clipboard

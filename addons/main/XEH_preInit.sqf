@@ -19,6 +19,9 @@ GVAR(itemSources) = [];
 // The server's own rules, magazine name part -> caliber (fnc_parseAmmoRules).
 GVAR(ammoRuleList) = [];
 
+// Parts of magazine class names the server leaves alone, lowercase ("Excluded magazines" setting).
+GVAR(excludedList) = [];
+
 // The calibers as data: [id, tokens, [[variant id, tokens], ...]]. Any mod can add classes to gmr_calibers.
 GVAR(calibers) = ("true" configClasses (configFile >> "gmr_calibers")) apply {
     [

@@ -90,6 +90,16 @@ private _fnc_resetFacts = {GVAR(magazineCache) = createHashMap};
     [CBA_SETTINGS_SERVER, _rules], "", 1, {call FUNC(parseAmmoRules)}
 ] call CBA_fnc_addSetting;
 
+// Magazines that hold no rounds to take out: flamethrower tanks, batteries, energy cells.
+[
+    QGVAR(excludedMagazines), "EDITBOX", [LLSTRING(Setting_ExcludedMagazines), LLSTRING(Setting_ExcludedMagazines_Desc)],
+    [CBA_SETTINGS_SERVER, _rules], "", 1, {
+        params ["_value"];
+        GVAR(excludedList) = ((_value splitString ",") apply {toLowerANSI trim _x}) select {_x isNotEqualTo ""};
+        GVAR(magazineCache) = createHashMap;
+    }
+] call CBA_fnc_addSetting;
+
 // ----- Server: magazines -----
 // Switches
 [

@@ -101,6 +101,12 @@ rhsusf_100Rnd_762x51: 762x51: belt</English>
         <Key ID="STR_gmr_main_Setting_Enabled_Desc">
             <English>Off: no menus, no empty magazines\nand no reload guard. The items stay.</English>
         </Key>
+        <Key ID="STR_gmr_main_Setting_ExcludedMagazines">
+            <English>Excluded magazines</English>
+        </Key>
+        <Key ID="STR_gmr_main_Setting_ExcludedMagazines_Desc">
+            <English>Magazines GreenMag leaves alone:\nno unloading, loading or refilling.\nFor flamethrower tanks, batteries\nand the like.\n\nmagazine, magazine\n\nPart of the class name is enough,\nbut every class containing it counts:\nflamethrower, _battery</English>
+        </Key>
         <Key ID="STR_gmr_main_Setting_FreeRefill">
             <English>Free refill</English>
         </Key>
