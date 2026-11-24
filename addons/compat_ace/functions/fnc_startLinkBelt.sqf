@@ -53,7 +53,7 @@ PLAY_SOUND(grab);
 
         ([_unit, _target, ["isNotInside"]] call ace_common_fnc_canInteractWith)
         && {_unit distance _target < 3}
-        && {speed _target < 1}
+        && {vectorMagnitude velocity _target < 1}
         && {currentMagazine _target == _magazine}
     },
     ["isNotInside"]
