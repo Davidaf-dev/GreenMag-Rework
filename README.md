@@ -150,6 +150,8 @@ armour-piercing rounds, which there are for 7.92x57 (S.m.K.), .303, 7.62x25 (P-4
 
 ## Development
 
+`tools/generate_compat.py` and `tools/generate_compat_ww2.py` write the compat addons from the other mods' own configs;
+the latter reads them with `tools/pbo_config.py`, without HEMTT, and has tables for what a name does not tell.
 `tools/generate_items.py` writes the item configs from its table, `tools/render_items.py` renders the item
 pictures in Blender, `tools/make_icons.py` converts them and draws the menu icons, and `tools/cut_sounds.py`
 cuts the loading and unloading sounds out of CC0 recordings from BigSoundBank (see its header). `tools/anim/build_load_gesture.py` computes the loading animation from the Arma 3 Samples'

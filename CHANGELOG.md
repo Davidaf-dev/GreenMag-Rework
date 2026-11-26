@@ -14,7 +14,7 @@
 - Fixed by the compat: CSA38's Mosin clips, its 9 mm Parabellum and Browning magazines and its .303 had no caliber; IFA3's Nagant revolver counted as 7.62x25 and Faces of War's Webley as .45 ACP
 - Left alone (`gmr_disabled`): flamethrower fuel, the knife and katana "magazines", blanks, the fake and empty placeholder magazines of Northern Fronts' and IFA3 Liberation's scripted reloads, and Northern Fronts' boxes of 37 to 114 mm shells
 - Still universal: the guns of vehicles, aircraft and ships from 13 mm up (20 mm and larger autocannon, MG 131), which no soldier carries magazines of
-- Tools: the render tools take several names, separated by commas, as their filter
+- Tools: `tools/generate_compat_ww2.py` writes the Second World War compat addons, reading the mods' configs with `tools/pbo_config.py`; the render tools take several names, separated by commas, as their filter
 
 ## 1.3.3
 

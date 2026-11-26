@@ -296,7 +296,7 @@ class gmr_calibers {
             class basic {displayName = "Basic"; tokens[] = {};};
         };
     };
-    class 455 {displayName = ".455 Webley"; tokens[] = {"455webley","455_webley","_455"}; packs[] = {60,30,10};
+    class 455 {displayName = ".455 Webley"; tokens[] = {"455webley","455_webley"}; packs[] = {60,30,10};
         class variants {
             class basic {displayName = "Basic"; tokens[] = {};};
         };
