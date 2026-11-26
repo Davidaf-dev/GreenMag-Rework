@@ -3,6 +3,7 @@
 ## 1.3.3
 
 - Added: server setting "Excluded magazines" (Rules): magazines whose class name contains one of the listed parts are left alone, no unloading, loading or refilling; for flamethrower tanks and other magazines without rounds to take out (Spearhead M2 flamethrower). It is `flame` by default, so flamethrower tanks are left alone without any setup. Mods can still set `gmr_disabled = 1;` in a magazine's config for the same
+- Fixed: linking a loose belt into a gunner's weapon broke off on slopes; the gunner standing still is now checked by velocity, not by the facing-relative speed
 
 ## 1.3.2
 
