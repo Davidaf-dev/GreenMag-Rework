@@ -35,7 +35,7 @@ private _hidden = [];
     };
 } forEach [[EGVAR(main,arsenalBelts), "belt"], [EGVAR(main,arsenalPacks), "pack"], [EGVAR(main,arsenalRounds), "round"]];
 
-// Until the background count (XEH_postInit) is through, nothing is hidden for it.
+// Until the background count (fnc_countCalibers) is through, nothing is hidden for it.
 private _usedOnly = EGVAR(main,arsenalUsedCalibers) && {!isNil QGVAR(usedCalibers)};
 
 if (_hidden isEqualTo [] && {!_usedOnly} && {EGVAR(main,universalAmmo)}) exitWith {};
